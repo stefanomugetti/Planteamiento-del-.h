@@ -17,7 +17,7 @@ typedef struct{
 }Producto;
 
 Producto* prod_new(void);
-Producto* prod_newParam(char* descripcion,char* nacionalidad,char* tipo,int idProducto,float* precioPorUnidad);
+Producto* prod_newParam(char* descripcion,char* nacionalidad,char* tipo,int idProducto,float precioPorUnidad);
 int prod_delete(Producto* this);
 
 int prod_setDescripcion(Producto* this,char* descripcion);
@@ -32,13 +32,13 @@ int prod_setTipo(Producto* this,char* tipo);
 char* prod_getTipo(Producto* this,int* flagError);
 int isValidTipo(char* tipo);
 
-int prod_setPrecioPorUnidad(Producto* this,float* precioPorUnidad);
-float* prod_getPrecioPorUnidad(Producto* this,int* flagError);
-int isValidPrecioPorUnidad(float* precioPorUnidad);
+int prod_setPrecioPorUnidad(Producto* this,float precioPorUnidad);
+float prod_getPrecioPorUnidad(Producto* this,int* flagError);
+int isValidPrecioPorUnidad(float precioPorUnidad);
 
 int prod_setIdProducto(Producto* this,int idProducto);
 int prod_getIdProducto(Producto* this,int* flagError);
-int isValidId(int id);
+int isValidId(int idNacionalidad);
 
 
 #endif /* PRODUCTO_H_ */
