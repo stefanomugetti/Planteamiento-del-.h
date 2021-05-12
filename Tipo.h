@@ -15,24 +15,24 @@ typedef struct{
 	int idTipo;
 }Tipo;
 
-Tipo* prod_new(void);
-Tipo* prod_newParam(char* marca,char* fabrica,char* tipoDeTela,int idTipo);
-int prod_delete(Tipo* this);
+Tipo* tipo_new(void);
+Tipo* tipo_newParam(char* marca,char* fabrica,char* tipoDeTela,int idTipo);
+int tipo_delete(Tipo* this);
 
-tipo_setMarca(Tipo* this,char* marca);
-tipo_getMarca(Tipo* this,int* FlagError);
-isValidMarca(char* marca);
+int tipo_setMarca(Tipo* this,char* marca);
+char* tipo_getMarca(Tipo* this,int* FlagError);
+int isValidMarca(char* marca);
 
-tipo_setFabrica(Tipo* this,char* fabrica);
-tipo_getFabrica(Tipo* this,int* FlagError);
-isValidFabrica(char* fabrica);
+int tipo_setFabrica(Tipo* this,char* fabrica);
+char*tipo_getFabrica(Tipo* this,int* FlagError);
+int isValidFabrica(char* fabrica);
 
-tipo_setTipoDeTela(Tipo* this,char* tipoDeTela);
-tipo_getTipoDeTela(Tipo* this,int* FlagError);
-isValidTipoDeTela(char* tipoDeTela);
+int tipo_setTipoDeTela(Tipo* this,char* tipoDeTela);
+char*tipo_getTipoDeTela(Tipo* this,int* FlagError);
+int isValidTipoDeTela(char* tipoDeTela);
 
-tipo_setIdTipo(Tipo* this,int idTipo);
-tipo_getIdTipo(Tipo* this,int* FlagError);
-isValidIdTipo(int idTipo);
+int tipo_setIdTipo(Tipo* this,int idTipo);
+int tipo_getIdTipo(Tipo* this,int* FlagError);
+int isValidIdTipo(int idTipo);
 
 #endif /* TIPO_H_ */

@@ -17,12 +17,12 @@ Nacionalidad* nac_new(void);
 Nacionalidad* nac_newParam(char* descripcion,int idNacionalidad);
 int nac_delete(Nacionalidad* this);
 
-nac_setDescripcion(Tipo* this,char* descripcion);
-nac_getDescripcion(Tipo* this,int* FlagError);
-isValidDescripcion(char* descripcion);
+int nac_setDescripcion(Nacionalidad* this,char* descripcion);
+char* nac_getDescripcion(Nacionalidad* this,int* FlagError);
+int isValidDescripcion(char* descripcion);
 
-nac_setIdNacionalidad(Tipo* this,int idNacionalidad);
-nac_getIdNacionalidad(Tipo* this,int* FlagError);
-isValidIdNacionalidad(int idNacionalidad);
+int nac_setIdNacionalidad(Nacionalidad* this,int idNacionalidad);
+int nac_getIdNacionalidad(Nacionalidad* this,int* FlagError);
+int isValidIdNacionalidad(int idNacionalidad);
 
 #endif /* NACIONALIDAD_H_ */
